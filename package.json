@@ -1,0 +1,23 @@
+{
+  "name": "get-google-doodle",
+  "version": "0.0.1",
+  "description": "Get a google doodle",
+  "main": "get-doodle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craveytrain/get-google-doodle.git"
+  },
+  "author": "Mike Cravey <techie@craveytrain.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craveytrain/get-google-doodle/issues"
+  },
+  "homepage": "https://github.com/craveytrain/get-google-doodle#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request-promise": "^3.0.0"
+  }
+}
