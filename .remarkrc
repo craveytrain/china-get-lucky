@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "remark-lint": {
+      "maximum-line-length": false,
+      "no-heading-punctuation": false
+    }
+  }
+}

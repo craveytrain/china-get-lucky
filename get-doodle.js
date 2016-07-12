@@ -21,7 +21,8 @@ module.exports = ( context, req, res ) => {
         .then( img => {
             return request( {
                     uri: 'https:' + img.imgUrl,
-                    resolveWithFullResponse: true
+                    resolveWithFullResponse: true,
+                    encoding: null
                 } )
                 .then( response => {
 
@@ -31,7 +32,6 @@ module.exports = ( context, req, res ) => {
                     return img;
                 } )
         } )
-        // .then( payload => console.log( payload ) )
         .then( img => {
 
             res.writeHead( 200, {
@@ -45,10 +45,8 @@ module.exports = ( context, req, res ) => {
         ` );
     } )
     .catch( ( err ) => {
-        console.log( 'Error thrown!!!!!11!!' );
         console.error( err.stack );
-        // This ain't working...
-        res.status( 500 )
-            .send( 'Something broke!' );
+        res.writeHead( 500 );
+        res.end( 'Something broke!' );
     } );
 }
